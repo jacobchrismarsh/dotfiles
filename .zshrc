@@ -107,6 +107,8 @@ alias v="nvim"
 alias vz="nvim ~/.zshrc"
 alias vt="nvim ~/.tmux.conf"
 alias s="source ~/.zshrc"
+# Try to join the "main" session or create a new one
+alias tm="tmux new-session -A -s main"
 alias lg="lazygit"
 
 HISTFILE=~/.zsh_history
