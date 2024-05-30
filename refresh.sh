@@ -12,7 +12,8 @@ ln -s $(pwd)/nvim ~/.config/nvim/
 ln -s $(pwd)/.zshrc ~/.zshrc
 ln -s $(pwd)/.tmux.conf ~/.tmux.conf
 
-brew install zoxide # Smart `cd` replacement
+# for some reason the brew install doesn't work for the zsh zoxide plugin
+cargo install zoxide
 brew install rg
 brew install fd
 brew install htop
