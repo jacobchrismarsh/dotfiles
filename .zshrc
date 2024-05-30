@@ -107,6 +107,7 @@ alias v="nvim"
 alias vz="nvim ~/.zshrc"
 alias vt="nvim ~/.tmux.conf"
 alias s="source ~/.zshrc"
+alias lg="lazygit"
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000

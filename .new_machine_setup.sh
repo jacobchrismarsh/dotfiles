@@ -47,6 +47,7 @@ brew install fd
 brew install htop
 brew install fzf && $(brew --prefix)/opt/fzf/install
 brew install tmux
+brew install lazygit
 brew install neovim &&
 	python3 -m pip install --user --upgrade pynvim # Allows us to use plugins that require vim+python3
 
