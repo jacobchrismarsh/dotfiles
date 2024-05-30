@@ -70,35 +70,27 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+  zoxide
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+  zsh-vi-mode
+)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+# USER SETTINGS GO HERE
+ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 
-# export MANPATH="/usr/local/man:$MANPATH"
+# Make sure that we use FZF when we hit Ctrl-R
+bindkey -M emacs '^T' fzf-file-widget
+bindkey -M vicmd '^T' fzf-file-widget
+bindkey -M viins '^T' fzf-file-widget
+bindkey -M emacs '^R' fzf-history-widget
+bindkey -M vicmd '^R' fzf-history-widget
+bindkey -M viins '^R' fzf-history-widget
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source <(fzf --zsh)
 export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
