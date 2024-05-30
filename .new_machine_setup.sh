@@ -37,10 +37,6 @@ brew install vim
 unalias python
 source ~/.zshrc # .zshrc contains a line that points `vim` to the homebrew version
 
-# setup ViM evironment
-gh repo clone jacobchrismarsh/myVim
-~/myVim/setup.sh
-
 brew install zoxide # Smart `cd` replacement
 brew install rg
 brew install fd
@@ -48,8 +44,8 @@ brew install htop
 brew install fzf && $(brew --prefix)/opt/fzf/install
 brew install tmux
 brew install lazygit
-brew install neovim &&
-	python3 -m pip install --user --upgrade pynvim # Allows us to use plugins that require vim+python3
+# Allows us to use plugins that require vim+python3
+brew install neovim && python3 -m pip install --user --upgrade pynvim
 
 brew install --cask iterm2
 brew install --cask karabiner-elements
