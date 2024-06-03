@@ -22,4 +22,4 @@ vim.g.netrw_localrmdir = "rm -r"
 opt.scrolloff = 5
 
 opt.undofile = true
-opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+opt.undodir = { os.getenv("HOME") .. "/.vim/undodir" }
