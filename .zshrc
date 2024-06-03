@@ -109,3 +109,6 @@ SAVEHIST=10000
 setopt appendhistory
 
 EDITOR=nvim
+
+# Initialize zoxide
+eval "$(zoxide init zsh)
