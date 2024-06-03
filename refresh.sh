@@ -23,3 +23,6 @@ brew install lazygit
 
 # Allows us to use plugins that require vim+python3
 brew install neovim && python3 -m pip install --user --upgrade pynvim
+
+# Instal tmux plugin manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
