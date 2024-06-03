@@ -16,4 +16,8 @@ return {
   },
   { "metalelf0/jellybeans-nvim" },
   { "kabouzeid/nvim-jellybeans" },
+  { -- Default colorscheme in neovim
+    "LazyVim/LazyVim",
+    opts = { colorscheme = "tokyonight-moon" },
+  },
 }
