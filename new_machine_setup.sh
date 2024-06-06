@@ -47,6 +47,9 @@ brew install lazygit
 # Allows us to use plugins that require vim+python3
 brew install neovim && python3 -m pip install --user --upgrade pynvim
 
+# Like Bartender, but FOSS
+brew install jordanbaird-ice
+
 brew install --cask iterm2
 brew install --cask karabiner-elements
 brew install --cask bettertouchtool
