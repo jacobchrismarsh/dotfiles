@@ -111,4 +111,4 @@ setopt appendhistory
 EDITOR=nvim
 
 # Initialize zoxide
-eval "$(zoxide init zsh)
+eval "$(zoxide init zsh)"
