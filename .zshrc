@@ -112,3 +112,11 @@ EDITOR=nvim
 
 # Initialize zoxide
 eval "$(zoxide init zsh)"
+
+# Setup history properly
+export HISTSIZE=1000000000
+export SAVEHIST=$HISTSIZE
+setopt EXTENDED_HISTORY
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+HISTORY_IGNORE='(hg *|exit|cd ..|cd ~|..|~|z *|[bf]g *|s|ls|clear)'
