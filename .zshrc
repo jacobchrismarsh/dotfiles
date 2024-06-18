@@ -83,16 +83,25 @@ source $ZSH/oh-my-zsh.sh
 # USER SETTINGS GO HERE
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 
-# Make sure that we use FZF when we hit Ctrl-R
-bindkey -M emacs '^T' fzf-file-widget
-bindkey -M vicmd '^T' fzf-file-widget
-bindkey -M viins '^T' fzf-file-widget
-bindkey -M emacs '^R' fzf-history-widget
-bindkey -M vicmd '^R' fzf-history-widget
-bindkey -M viins '^R' fzf-history-widget
 
+# zsh-vi-mode takes over many keybindings, so we have to init fzf like this
+# https://github.com/jeffreytse/zsh-vi-mode?tab=readme-ov-file#execute-extra-commands
+function zvm_after_init() {
+  echo "inside the after init"
+  source <(fzf --zsh)
+  echo "after the after init"
+}
 
-source <(fzf --zsh)
+# The plugin will auto execute this zvm_after_lazy_keybindings function
+function zvm_after_lazy_keybindings() {
+  bindkey -M emacs '^T' fzf-file-widget
+  bindkey -M vicmd '^T' fzf-file-widget
+  bindkey -M viins '^T' fzf-file-widget
+  bindkey -M emacs '^R' fzf-history-widget
+  bindkey -M vicmd '^R' fzf-history-widget
+  bindkey -M viins '^R' fzf-history-widget
+}
+
 export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
 
 alias v="nvim"
