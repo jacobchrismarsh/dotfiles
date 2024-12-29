@@ -38,7 +38,8 @@ brew install vim
 unalias python
 source ~/.zshrc # .zshrc contains a line that points `vim` to the homebrew version
 
-brew install zoxide # Smart `cd` replacement
+brew install ghostty # preferred terminal emulator
+brew install zoxide  # Smart `cd` replacement
 brew install rg
 brew install fd
 brew install htop
@@ -65,6 +66,8 @@ mas install 1333542190 # 1Password
 mas install 1569813296 # 1Password for Safari
 mas install 430798174  # hazeover distraction dimmer
 mas install 1480933944 # vimari safari extension
+
+brew install 1password-cli
 
 # Install Rust!
 curl https://sh.rustup.rs -sSf | sh
