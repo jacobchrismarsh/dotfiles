@@ -89,9 +89,7 @@ ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 # zsh-vi-mode takes over many keybindings, so we have to init fzf like this
 # https://github.com/jeffreytse/zsh-vi-mode?tab=readme-ov-file#execute-extra-commands
 function zvm_after_init() {
-  echo "inside the after init"
   source <(fzf --zsh)
-  echo "after the after init"
 }
 
 # The plugin will auto execute this zvm_after_lazy_keybindings function
